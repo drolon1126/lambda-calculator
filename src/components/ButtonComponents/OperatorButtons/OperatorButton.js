@@ -23,7 +23,17 @@ const OperatorButton = (props) => {
   return (
     <>
       {/* Display a button element rendering the data being passed down from the parent container on props */}
-      <button style={{gridArea: gridPlace, borderRadius:'50px', backgroundColor:'lightblue', borderColor:'lightblue'}} >{props.char}</button>
+      <button 
+        style={{gridArea: gridPlace, borderRadius:'50px', backgroundColor:'lightblue', borderColor:'lightblue'}} 
+        onClick={() => {
+          switch (props.char) {
+            case '=':
+              return props.setDisplay(eval(props.display))
+            default:
+              return props.setDisplay(`${props.display}${props.value}`)
+          }
+        }}
+      >{props.char}</button>
     </>
   );
 };

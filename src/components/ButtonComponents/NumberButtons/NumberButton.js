@@ -40,7 +40,12 @@ const NumberButton = (props) => {
   return (
     <>
       {/* Display a button element rendering the data being passed down from the parent container on props */}
-      <button style={{gridArea: gridPlace, borderRadius:'50px', backgroundColor:'blue', borderColor:'blue'}}>{props.num}</button>
+      <button 
+        style={{gridArea: gridPlace, borderRadius:'50px', backgroundColor:'blue', borderColor:'blue'}}
+        onClick={() => props.setDisplay(
+          props.display === 0 ? props.num : `${props.display}${props.num}`
+        )}
+      >{props.num}</button>
     </>
   );
 };
