@@ -1,0 +1,29 @@
+.container{
+  background: red;
+  width: max-content;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+
+  .display{
+    width: 90%;
+    height: 65px;
+    margin: 10px auto;
+    border-radius: 50px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 20px;
+    background: black;
+    font-size: 2em;
+  }
+  .App{
+        display: grid;
+        grid-template-columns: 100px 100px 100px 100px;
+        grid-template-rows: 100px 100px 100px 100px 100px;
+        grid-template-areas: 'C neg percent div' 'one two three mult' 'four five six minus' 'seven eight nine plus' 'zero zero period equals';
+    }
+}
